@@ -11,12 +11,13 @@ h1 {
     padding: 3vh 8vh 3vh 8vh;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 10px black;
-    letter-spacing: 0.15cm;
-    font-family: 'Rubik Doodle Shadow', system-ui;
+    letter-spacing: 0.01cm;
+    font-family: 'Rampart One', sans-serif;
     background-color: rgba(0, 0, 0, 0.83);
     margin-top: 20vh;
     text-align: center;
     animation: floating infinite 3s ease;
+    font-weight: 500;
 }
 
 h1:hover {

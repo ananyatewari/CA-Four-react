@@ -1,0 +1,30 @@
+div.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    user-select: none;
+    font-size: 4.5vw;
+    border-radius: 30px;
+    padding: 3vh 8vh 3vh 8vh;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px black;
+    letter-spacing: 0.15cm;
+    font-family: 'Rubik Doodle Shadow', system-ui;
+    background-color: rgba(0, 0, 0, 0.83);
+    margin-top: 20vh;
+    text-align: center;
+    animation: floating infinite 3s ease;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}

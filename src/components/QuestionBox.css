@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+div#parent {
+    display: flex;
+    justify-content: center;
+}
+
+div.box {
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba(255, 255, 255, 0.382); */
+    background-color: rgba(0, 0, 0, 0.349);
+    width:70vw;
+    height: fit-content;
+    border-radius: 50px;
+}
+
+div#counter {
+    font-size: 3.4vh;
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+}
+
+div#question {
+    text-align: center;
+    font-size: 5vh;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 2vh;
+    padding: 1vh 10vh 1vh 10vh;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.781);
+    user-select: none;
+}
+
+div.option {
+    background-color: rgb(224, 83, 130);
+    color: white;
+    margin: 2vh;
+    padding: 1vh;
+    font-size: 3.3vh;
+    user-select: none;
+    width: 60vw;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgb(141, 10, 54);
+    user-select: none;
+}
+
+div.option:hover {
+    cursor: pointer;
+    background-color: rgb(148, 0, 49);
+    transition-duration: 0.2s;
+}
+
+div#highlight {
+    background-color: cadetblue;
+    padding: 1vh 2vh 1.5vh 2vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3.5vh;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px rgb(89, 151, 151);
+    animation: floating infinite 3s ease;
+}
+
+div#highlight:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+div#highlight:not(:hover) {
+    transition-duration: 0.8s;
+}
+
+@media (max-width: 900px) {
+    div#question {
+        font-size: 3vh;
+    }
+    div.box h5 {
+        font-size: 3.5vh;
+    }
+    div.option {
+        margin: 1vh;
+    }
+}
+
+@media (max-width: 500px) {
+    div#question {
+        font-size: 2.5vh;
+    }
+    div.option {
+        font-size: 2.5vh;
+    }
+    div#highlight {
+        font-size: 3vh;
+    }
+    div.box h5 {
+        font-size: 2vh;
+    }
+    div.box h2 {
+        font-size: 4vh;
+        padding: 1vh;
+    }
+    div.box h3 {
+        font-size: 3vh;
+    }
+    div#counter {
+        font-size: 2vh;
+    }
+}

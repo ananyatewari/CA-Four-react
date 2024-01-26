@@ -54,9 +54,8 @@ div.top img {
 
 div.top img:active {
     transform: rotate(-150deg);
-    transition-duration: 0.7s;
+    transition-duration: 1s;
 }
-
 
 div.box h5 {
     text-align: center;

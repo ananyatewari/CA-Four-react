@@ -9,10 +9,14 @@ import sun from "./assets/sun.png";
 import moon from "./assets/moon.png";
 
 function App() {
+  // making use of hooks in functional component
+
+  // alternates the bg and sun/moon icon for dark & light mode
   const [toggle, handleToggle] = useState("light");
   let bgimage = toggle == "light" ? lightbg : darkbg;
   let iconimg = toggle == "light" ? sun : moon;
 
+  // to handle the onclick functionality of the first page
   const [heading, showHeading] = useState(true);
   const [body, showBody] = useState(false);
 
@@ -28,26 +32,22 @@ function App() {
 
   return (
     <>
-      <div className="bgfull" style={{ backgroundImage: `url(${bgimage})` }}>
+      <div className="bgfull" style={{ backgroundImage: `url(${bgimage})` }}> 
         <div className="backdrop">
           <div className="top">
             <h2>BrainyWiz</h2>
             <span
-              onClick={() => {
-                handleToggle(toggle == "light" ? "dark" : "light");
-              }}
-            >
+            // to handle dark mode and light mode
+              onClick={() => { handleToggle(toggle == "light" ? "dark" : "light") }}>
+              {/* icon control */}
               <img src={iconimg} alt="icon" />
             </span>
           </div>
 
-          {heading ? (
-            <Heading
-              tostartquiz={() => {
-                startQuiz();
-              }}
-            />
-          ) : null}
+          {/* sending props for onclick functionality of the start page*/}
+          {heading ? <Heading tostartquiz={() => { startQuiz() }}/> : null}
+
+          {/* questionbox has the questions with options content, will render only when true */}
           {body ? <QuestionBox torestartquiz={() => restartQuiz()} /> : null}
         </div>
       </div>

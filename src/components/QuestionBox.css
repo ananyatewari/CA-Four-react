@@ -99,6 +99,9 @@ div.highlight:not(:hover) {
     div.option {
         margin: 1vh;
     }
+    div.buttons {
+        font-size: 2vh;
+    }
 }
 
 @media (max-width: 500px) {

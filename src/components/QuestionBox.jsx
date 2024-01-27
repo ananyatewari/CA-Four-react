@@ -15,25 +15,28 @@ export default function QuestionBox({ torestartquiz }) {
   // and show result after the last question
   const eachOption = (i) => {
     if (i == 4) {
-      showResult(true);
+      showResult(true)
     } else if (i < 5) {
-      switchQuestions(i + 1);
+      switchQuestions(i + 1)
     }
   };
 
   // logic to calculate the score
   const showScore = (i) => {
     if (questions[current].options[i].isCorrect) {
-      checkScore(score + 1);
+      checkScore(score + 1)
     }
   };
 
   // logic to manage the colour 
   // of the question onclick of the button 
-  let colour = highlight ? "darkblue" : "red";
+  let colour = highlight ? "darkblue" : "red"
   const changeColour = () => {
-    highlight ? showHighlight(false) : showHighlight(true);
+    highlight ? showHighlight(false) : null
   };
+  const removeHighlight = () => {
+    showHighlight(!highlight)
+  }
 
   return (
     <>
@@ -53,22 +56,24 @@ export default function QuestionBox({ torestartquiz }) {
           {/* options for each question of index i to display it */}
             {questions[current].options.map((option, i) => {
               return (
-                <div
-                  className="option"
-                  key={i}
-                  onClick={() => {
+                <div className="option" key={i} onClick={() => {
                     eachOption(current)
                     showScore(i)
-                  }}>
+                }}>
                   {option.text}
                 </div>
               )
             })}
 
+          <div className="buttons">
             {/* to chnage/manage the colour of the question */}
-            <div id="highlight" onClick={changeColour}>
-              {highlight ? "Highlight" : "Unhighlight"}
+            <div className="highlight" onClick={changeColour}>
+              Highlight
             </div>
+            <div className="highlight" onClick={removeHighlight}>
+              Remove Highlight
+            </div>
+          </div>
           </div>
 
         )} {/* end of the false result condition */}

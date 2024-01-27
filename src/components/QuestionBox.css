@@ -40,7 +40,7 @@ div#question {
 div.option {
     background-color: #e05382;
     color: white;
-    margin: 2vh;
+    margin: 1.5vh;
     padding: 1vh;
     font-size: 3.3vh;
     user-select: none;
@@ -57,7 +57,15 @@ div.option:hover {
     transition-duration: 0.2s;
 }
 
-div#highlight {
+div.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+div.highlight {
     background-color: #5f9ea0;
     padding: 1vh 2vh 1.5vh 2vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -66,15 +74,18 @@ div#highlight {
     border-radius: 40px;
     box-shadow: 1px 1px 10px rgb(89, 151, 151);
     animation: floating infinite 3s ease;
+    margin: 0.2vh 5vh 0.2vh 5vh;
+    width: max-content;
 }
 
-div#highlight:hover {
+div.highlight:hover {
+    width: fit-content;
     cursor: pointer;
     transform: scale(1.1);
     transition-duration: 0.5s;
 }
 
-div#highlight:not(:hover) {
+div.highlight:not(:hover) {
     transition-duration: 0.8s;
 }
 
@@ -98,7 +109,7 @@ div#highlight:not(:hover) {
         font-size: 2.5vh;
         margin: 0.5vh;
     }
-    div#highlight {
+    div.highlight {
         font-size: 3vh;
     }
     div.box h5 {

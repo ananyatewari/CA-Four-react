@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import questions from "./questions.js";
 import Heading from "./components/Heading.jsx";
@@ -19,16 +19,23 @@ function App() {
   // to handle the onclick functionality of the first page
   const [heading, showHeading] = useState(true);
   const [body, showBody] = useState(false);
-
   const startQuiz = () => {
     showHeading(false);
     showBody(true);
   };
-
+  
   const restartQuiz = () => {
     showHeading(true);
     showBody(false);
   };
+  
+  const [loader, setLoad] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 1500); // Replace with your desired loading time
+  }, []);
 
   return (
     <>
@@ -43,7 +50,11 @@ function App() {
               <img src={iconimg} alt="icon" />
             </span>
           </div>
-
+        {loader && (
+          <div id="loadingbg">
+            <div id="loader"></div>
+          </div>
+        )}
           {/* sending props for onclick functionality of the start page*/}
           {heading ? <Heading tostartquiz={() => { startQuiz() }}/> : null}
 

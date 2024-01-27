@@ -35,7 +35,7 @@ export default function QuestionBox({ torestartquiz }) {
     highlight ? showHighlight(false) : null
   };
   const removeHighlight = () => {
-    showHighlight(!highlight)
+    showHighlight(true)
   }
 
   return (

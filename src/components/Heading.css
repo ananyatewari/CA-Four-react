@@ -28,7 +28,7 @@ h1:hover {
 
 @keyframes floating {
     0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 25px); }
+    50%  { transform: translate(0, 13px); }
     100%   { transform: translate(0, 0px); }    
 }
 

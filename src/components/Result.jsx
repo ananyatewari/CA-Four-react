@@ -23,7 +23,7 @@ export default function Result({score, restart}) {
       <h3>your score: {score*20}%</h3>
       <h6>no of correct answers - {score}</h6>
       <h5>{message}</h5>
-      <div id="restart" onClick={restart}>Restart</div>
+      <div id="restart" onClick={restart}>Retake</div>
     </div>
   )
 }

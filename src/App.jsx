@@ -7,6 +7,7 @@ import lightbg from "./assets/light.png";
 import darkbg from "./assets/dark.png";
 import sun from "./assets/sun.png";
 import moon from "./assets/moon.png";
+import logo from "./assets/favicon.png"
 
 function App() {
   // making use of hooks in functional component
@@ -42,7 +43,10 @@ function App() {
       <div className="bgfull" style={{ backgroundImage: `url(${bgimage})` }}> 
         <div className="backdrop">
           <div className="top">
-            <h2>BrainyWiz</h2>
+            <div>
+              <img src={logo} alt="" />
+              <h2>BrainyWiz</h2>
+            </div>
             <span
             // to handle dark mode and light mode
               onClick={() => { handleToggle(toggle == "light" ? "dark" : "light") }}>

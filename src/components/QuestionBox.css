@@ -74,7 +74,7 @@ div.highlight {
     border-radius: 40px;
     box-shadow: 1px 1px 10px rgb(89, 151, 151);
     animation: floating infinite 3s ease;
-    margin: 0.2vh 5vh 0.2vh 5vh;
+    margin: 0.5vh 5vh 0.7vh 5vh;
     width: max-content;
 }
 
@@ -103,14 +103,14 @@ div.highlight:not(:hover) {
 
 @media (max-width: 500px) {
     div#question {
-        font-size: 2.5vh;
+        font-size: 2.2vh;
     }
     div.option {
         font-size: 2.5vh;
         margin: 0.5vh;
     }
     div.highlight {
-        font-size: 3vh;
+        font-size: 2vh;
     }
     div.box h5 {
         font-size: 2vh;
